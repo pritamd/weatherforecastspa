@@ -1,5 +1,12 @@
 // Create controller
 weatherApp.controller('homeController', ['$scope', '$location', '$log', 'cityService',  function($scope, $location, $log, cityService){
+    var self = this;
+    
+    self.testdata = [
+        {id:1, label: 'First'},
+        {id:2, label: 'Second'}
+    ];
+    
     $scope.city = cityService.city;
     $scope.result = '';
     $scope.options = {
@@ -33,3 +40,24 @@ weatherApp.controller('forecastController', ['$scope', '$location', '$log', '$re
 
     
 }]);
+
+// Jasmine unit tests
+
+describe('Controller: homeController', function() {
+   
+    beforeEach(module('weatherApp'));
+    
+    var homeCtrl;
+    
+    // Instantiate a new instance of home controller 
+    beforeEach(inject(function($controller){
+        homeCtrl = $controller('homeController');
+    }));
+    
+    it('should have the city set correctly', function(){
+       expect(homeCtrl.testdata).toEqual([
+        {id:1, label: 'First'},
+        {id:2, label: 'Second'}           
+       ]); 
+    });    
+});
