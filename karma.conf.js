@@ -16,9 +16,14 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
         './vendor/angular/angular.min.js',
+         './vendor/angular-route/angular-route.min.js',
+        './vendor/angular-resource/angular-resource.min.js',
         './vendor/angular-mocks/angular-mocks.js',
+        'ngAutocomplete.js',
         'app.js',
-        'controllers.js'
+        'services.js',
+        'controllers.js',
+        './test/unittest/unittest.js'  
     ],
 
 
