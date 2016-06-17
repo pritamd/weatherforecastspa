@@ -1,5 +1,6 @@
+'use strict';
 // Setup routes
-weatherApp.config(function($routeProvider){
+weatherApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
     // route for the home page
     .when('/', {
@@ -15,4 +16,5 @@ weatherApp.config(function($routeProvider){
         templateUrl : 'pages/forecast.htm',
         controller: 'forecastController'        
     });
-});
+}]); 
+ 

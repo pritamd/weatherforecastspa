@@ -1,3 +1,4 @@
+'use strict';
 
 weatherApp.directive('weatherReport', function() {
     return{

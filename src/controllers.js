@@ -1,3 +1,5 @@
+'use strict';
+
 // Create controller
 weatherApp.controller('homeController', ['$scope', '$location', '$log', 'cityService',  function($scope, $location, $log, cityService){
 
@@ -14,13 +16,6 @@ weatherApp.controller('homeController', ['$scope', '$location', '$log', 'citySer
     $scope.submit = function() {
       $location.path("/forecast");  
     };
-    
-    var self = this;
-    
-    self.testdata = [
-        {id:1, label: 'First'},
-        {id:2, label: 'Second'}
-    ];   
     
 }]);
 

@@ -19,10 +19,12 @@ module.exports = function(config) {
          './vendor/angular-route/angular-route.min.js',
         './vendor/angular-resource/angular-resource.min.js',
         './vendor/angular-mocks/angular-mocks.js',
-        'ngAutocomplete.js',
-        'app.js',
-        'services.js',
-        'controllers.js',
+        './vendor/ngAutoComplete/ngAutocomplete.js',
+        './src/app.js',
+        './src/services.js',
+        './src/controllers.js',
+        './src/routes.js',
+        './src/directives.js',
         './test/unittest/unittest.js'  
     ],
 
